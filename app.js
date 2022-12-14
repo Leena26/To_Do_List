@@ -5,11 +5,15 @@ var list = document.getElementById("list");
 document.getElementById("btn").onclick=click;
 
 function click(){
-    activities.push(input.value);
+     if(input.value==""){
+        alert("Please enter a value!")
+    }else{
+        activities.push(input.value);
     
-    input.value = "";
+        input.value = "";
 
-    showList();
+        showList();
+    }
 }
 
 function showList(){
